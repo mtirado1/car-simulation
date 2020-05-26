@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+	body {
+		font-family: sans-serif;
+	}
+
+	p {
+		color: #333;
+	}
+
+	h1,h2 {
+		font-weight: normal;
+	}
+
+	.params {
+		display: inline-block;
+		width: 50%;
+		text-align: center;
+	}
+
+	body {
+		width: 60%;
+		margin-left: 20%;
+	}
+</style>
+</head>
+<body>
+		<center>
+		<h1>Simulación de Carro Autónomo</h1>
+		<canvas id="canvas" width="800" height="400" style="border: 4px solid #333333">
+		</canvas>
+		</center>
+	<div class="params">
+		<h2>Parámetros del carro</h2>
+		<p>Velocidad del auto <input type="range" min="0" max="100" value="10" class="slider" id="speed"></p>
+		<p>Tiempo de Muestreo <input type="range" min="0" max="100" value="10" class="slider" id="sampling"></p>
+		<p>Ganancia Proporcional <input type="number" value="3" step="0.01" id="gain-p"></p>
+		<p>Ganancia Integral <input type="number" value="0" step="0.01" id="gain-i"></p>
+		<p>Ganancia Derivativa <input type="number" value="0" step="0.01" id="gain-d"></p>
+	</div><div class="params">
+		<h2>Parámetros de la pista</h2>
+		<p>Alto (cm) <input type="number" value="400" step="1" id="nY"></p>
+		<p>Largo (cm) <input type="number" value="200" step=1" id="nX"></p>
+		<p>Ancho (cm) <input type="number" value="30" step="1" id="nW"></p>
+		<p>Radio de curva (cm) <input type="number" value="40" step="1" id="nR"></p>
+	</div>
+	<script src="car.js"></script>
+</body>
+</html>
