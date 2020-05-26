@@ -1,2 +1,4 @@
-# car-simulation
-2D lane following simulation
+
+# Autonomous lane follower simulation
+
+Simulates a lane-follower vehicle.
